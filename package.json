@@ -1,0 +1,30 @@
+{
+  "name": "synergy-labs",
+  "version": "1.0.0",
+  "description": "Automatizaciones con IA para PYMEs - Sitio web de Synergy Labs",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "15.3.3"
+  },
+  "keywords": [
+    "IA",
+    "automatización",
+    "PYMEs",
+    "Synergy Labs"
+  ],
+  "authors": [
+    "Diana Martín (Marketing)",
+    "Andreu Kwazema (Programador)"
+  ]
+} 

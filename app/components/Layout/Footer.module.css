@@ -1,0 +1,135 @@
+/* Footer básico responsive */
+.footer {
+  background-color: var(--color-gray-light);
+  border-top: 1px solid #E5E7EB;
+  margin-top: var(--spacing-xxl);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Marca y tagline */
+.brand {
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-blue);
+  margin-bottom: var(--spacing-xs);
+}
+
+.tagline {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Enlaces organizados */
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.linkGroup h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.linkGroup ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.linkGroup li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.linkGroup a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.linkGroup a:hover {
+  color: var(--color-primary-blue);
+}
+
+/* Parte inferior */
+.bottom {
+  border-top: 1px solid #E5E7EB;
+  padding-top: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-align: center;
+}
+
+.copyright p,
+.founders p {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.founders p {
+  font-style: italic;
+}
+
+/* Tablet - 768px+ */
+@media (min-width: 768px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .content {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  
+  .brand {
+    text-align: left;
+  }
+  
+  .links {
+    justify-self: end;
+  }
+  
+  .bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Desktop - 1024px+ */
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+  }
+  
+  .content {
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .links {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+} 
