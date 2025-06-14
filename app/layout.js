@@ -1,4 +1,5 @@
 import './globals.css'
+import HydrationSuppress from './components/DevTools/HydrationSuppress'
 
 export const metadata = {
   title: 'Synergy Labs - Automatizaciones con IA para PYMEs',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
+        <HydrationSuppress />
         {children}
       </body>
     </html>

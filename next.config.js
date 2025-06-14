@@ -3,6 +3,25 @@ const nextConfig = {
   // Configuración para Next.js 15
   reactStrictMode: true,
   
+  // Suprimir warnings de hidratación causados por extensiones del navegador
+  onDemandEntries: {
+    // Periodo de espera para mantener páginas en memoria
+    maxInactiveAge: 25 * 1000,
+    // Número de páginas que se mantienen en memoria
+    pagesBufferLength: 2,
+  },
+  
+  // Configuración de webpack para desarrollo
+  webpack: (config, { dev }) => {
+    // En desarrollo, suprimir warnings específicos de extensiones
+    if (dev) {
+      config.infrastructureLogging = {
+        level: 'error',
+      };
+    }
+    return config;
+  },
+  
   // Optimizaciones de imagen
   images: {
     domains: [],
