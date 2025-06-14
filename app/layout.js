@@ -10,6 +10,10 @@ export const metadata = {
   ],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+  themeColor: '#2563EB',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: 'Synergy Labs - Automatizaciones con IA para PYMEs',
     description: 'Transformamos tu PYME con automatizaciones inteligentes',
@@ -21,14 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#2563EB" />
-      </head>
       <body>
-        <div id="root">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
